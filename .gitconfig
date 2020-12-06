@@ -8,8 +8,13 @@
 # [core]
   # editor = code --wait
 [alias]
-  s = !git status -s
+  alias = !echo 'a(amend)\n\tc(commit)\n\td(diff)\n\tg(staged)\n\th(hard)\n\tl(log)\n\ts(status)\n\tr(rebase)'
+  # lo = !git log --oneline
   a = !git add -i && git commit --amend
   c = !git add -i && git commit -m
+  d = !git diff
+  g = !git diff --staged
+  h = !git reset HEAD~1 --hard
   l = !git log --pretty=format:'%C(blue)%h %C(white)%s - %C(cyan)%cn, %C(green)%cr %C(red)%d'
-  lo = !git log --oneline
+  r = !sh -c 'git rebase -i @~$1' -
+  s = !git status -s
