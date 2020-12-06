@@ -11,7 +11,7 @@
   alias = !echo 'a(amend)\n\tc(commit)\n\td(diff)\n\tg(staged)\n\th(reset)\n\tl(log)\n\tpl(pull)\n\tps(push)\n\ts(status)\n\tr(rebase)'
   # lo = !git log --oneline
   a = !git add -i && git commit --amend
-  c = !git add -i && git commit -m
+  c = "!c() { git add -i && git commit -m \"$*\"; }; c"
   d = !git diff
   g = !git diff --staged
   h = !git reset HEAD~1
