@@ -7,8 +7,7 @@
     "build": "tsc",
     "check:types": "tsc --noEmit",
     "lint": "eslint src/**/*.ts",
-    "test": "jest",
-    "test:staged": "jest",
+    "test": "jest --config ./jestrc.json",
     "watch": "tsc -watch"
   },
   "keywords": [],
