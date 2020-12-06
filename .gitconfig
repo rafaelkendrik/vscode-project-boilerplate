@@ -8,17 +8,19 @@
 # [core]
   # editor = code --wait
 [alias]
-  alias = !echo 'a(amend)\n\tc(commit)\n\td(diff)\n\tg(staged)\n\th(reset)\n\tl(log)\n\tpl(pull)\n\tps(push)\n\ts(status)\n\tr(rebase)'
-  # lo = !git log --oneline
+  alias = !echo 'a(add)\n\tc(commit)\n\tc(commit-ammend)\n\td(diff)\n\tds(diff-staged)\n\tl(log)\n\tlf(log-full)\n\tl(log-oneline)\n\tpl(pull)\n\tps(push)\n\tr(rebase)\n\ts(status)\n\tuc(undo-checkout)\n\tus(undo-staged)\n\tuh(undo-HEAD)'
   a = !sh -c 'git add ${1:--i}' -
-  c = "!c() { git add -i && git commit -m \"$*\"; }; c"
-  ca = !sh -c 'git add ${1:--i} && git commit --amend' -
+  c = "!c() { git commit -m \"$*\"; }; c"
+  ca = !git commit --amend
   d = !git diff
   ds = !git diff --staged
   l = !git log --pretty=format:'%C(blue)%h %C(white)%s - %C(cyan)%cn, %C(green)%cr %C(red)%d'
+  lf = !sh -c 'git log --color=always | less -r'
+  lo = !git log --oneline
   pl = !sh -c 'git pull origin ${1:-develop}${2+:}${2}' -
   ps = !sh -c 'git push origin ${1:-develop}' -
   r = !sh -c 'git rebase -i @~${1}' -
   s = !git status -s
-  u = !sh -c 'git checkout ${1:--i}' -
+  uc = !sh -c 'git checkout ${1:--i}' -
+  us = !sh -c 'git reset ${1:--i}' -
   uh = !git reset HEAD~1
