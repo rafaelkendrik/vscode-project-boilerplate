@@ -14,7 +14,7 @@
   ca = !git commit --amend
   d = !git diff
   ds = !git diff --staged
-  l = !git log --pretty=format:'%C(blue)%h %C(white)%s - %C(cyan)%cn, %C(green)%cr %C(red)%d'
+  l = !git log --pretty=tformat:'%C(blue)%h %C(white)%s - %C(cyan)%cn, %C(green)%cr%C(red)%d%C(yellow)%<(1,trunc)%-b' --color=always | sed '/^$/d'
   lf = !sh -c 'git log --color=always | less -r'
   lo = !git log --oneline
   pl = !sh -c 'git pull origin ${1:-develop}${2+:}${2}' -
