@@ -10,5 +10,7 @@
   "eslint.validate": ["javascript", "typescript"],
   "eslint.alwaysShowStatus": true,
   "cSpell.enabled": true,
-  "cSpell.words": []
+  "cSpell.words": [
+    "multiline"
+  ]
 }
