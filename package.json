@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "check:dependencies": "npm-check -s -u",
     "check:types": "tsc --noEmit",
     "lint": "eslint src/**/*.ts",
+    "postinstall": "npm check:dependencies && npm lint && npm test",
     "test": "jest --config ./jestrc.json",
     "watch": "tsc -watch"
   },
@@ -30,6 +32,7 @@
     "husky": "^4.3.4",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.3",
+    "npm-check": "^5.9.2",
     "prettier": "2.2.1",
     "ts-jest": "^26.4.4",
     "typescript": "^4.1.2"
