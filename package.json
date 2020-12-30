@@ -7,6 +7,7 @@
     "build": "tsc",
     "check:dependencies": "npm-check -s -u",
     "check:types": "tsc --noEmit",
+    "init:repository": "git update-ref -d HEAD && git commit -m 'chore: use vscode project boilerplate'",
     "lint": "eslint src/**/*.ts",
     "postinstall": "npm check:dependencies && npm lint && npm test",
     "test": "jest --config .jestrc.json",

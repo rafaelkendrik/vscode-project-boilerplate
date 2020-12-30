@@ -1,5 +1,13 @@
 # VSCode Project Boilerplate
 
+## Init
+
+Run the following script to start the repository without the boilerplate commits history.
+
+```sh
+$ npm run init:repository
+```
+
 ## Available Git Aliases
 
 | alias            | similar to                 |
