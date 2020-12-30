@@ -9,7 +9,7 @@
     "check:types": "tsc --noEmit",
     "lint": "eslint src/**/*.ts",
     "postinstall": "npm check:dependencies && npm lint && npm test",
-    "test": "jest --config ./jestrc.json",
+    "test": "jest --config .jestrc.json",
     "watch": "tsc -watch"
   },
   "keywords": [],
