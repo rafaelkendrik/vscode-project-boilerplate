@@ -17,8 +17,8 @@
   l = !git log --pretty=tformat:'%C(blue)%h %C(white)%s - %C(cyan)%cn, %C(green)%cr%C(red)%d%C(yellow)%<(1,trunc)%-b' --color=always | sed '/^$/d'
   lf = !sh -c 'git log --color=always | less -r'
   lo = !git log --oneline
-  pl = !sh -c 'git pull origin ${1:-develop}${2+:}${2}' -
-  ps = !sh -c 'git push origin ${1:-develop}' -
+  pl = !sh -c 'git pull origin ${1:-master}${2+:}${2}' -
+  ps = !sh -c 'git push origin ${1:-master}' -
   r = !sh -c 'git rebase -i @~${1}' -
   s = !git status -s
   uc = !sh -c 'git checkout ${1:--i}' -
