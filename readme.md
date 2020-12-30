@@ -8,11 +8,17 @@ Run the following script to start the repository without the boilerplate commits
 $ npm run init:repository
 ```
 
+## Stack
+
+- Typescript
+- ...
+
 ## Available Git Aliases
 
 | alias            | similar to                 |
 | :--------------- | :------------------------- |
 | git c my message | git commit -m "my message" |
+| ...              | ...                        |
 
 ## Commit Style
 
