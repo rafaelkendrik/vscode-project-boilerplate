@@ -13,7 +13,7 @@ $ npm run init:repository
 - Typescript
 - ...
 
-## Available Git Aliases
+## Available Git Aliases (Move to new repository)
 
 | alias            | similar to                 |
 | :--------------- | :------------------------- |
